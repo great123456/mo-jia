@@ -8,8 +8,8 @@ Vue.config.productionTip = false
 import Vant from 'vant'
 import 'vant/lib/vant-css/index.css'
 
-//import VConsole from 'vconsole'
-//var vConsole = new VConsole()
+import VConsole from 'vconsole'
+var vConsole = new VConsole()
 
 Vue.use(Vant)
 
