@@ -54,7 +54,7 @@ export default {
 	.center-top{
 		width:100%;
 		height:10rem;
-		background: #ffce00;
+		background: #38f;
 		position: relative;
 		.login{
 			width:5rem;
