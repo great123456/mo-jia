@@ -9,6 +9,7 @@ import login from '@/components/login'
 import order from '@/components/order'
 import search from '@/components/search'
 import pinpai from '@/components/pinpai'
+import success from '@/components/success'
 
 Vue.use(Router)
 
@@ -85,6 +86,13 @@ const router =  new Router({
       component: pinpai,
       meta: {
         title: '品牌训练营'
+      }
+    },{
+      path: '/success',
+      name: 'success',
+      component: success,
+      meta: {
+        title: '预定成功'
       }
     }
   ]

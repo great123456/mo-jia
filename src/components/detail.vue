@@ -72,7 +72,12 @@
         :label="label"
         button-text="立即预定"
         @submit="onSubmit"
-      />
+      >
+      <span class="service" @click="callphone">
+        <van-icon name="chat" class="service-chat"/>
+        联系房东
+      </span>
+      </van-submit-bar>
     </div>
 
   </div>
@@ -84,7 +89,7 @@ export default {
     return {
       label: ' ',
       indicators: false,
-      showCollect: false,
+      showCollect: true,
       images: ['http://img3.imgtn.bdimg.com/it/u=869719161,3930111106&fm=27&gp=0.jpg','http://img5.imgtn.bdimg.com/it/u=1260077534,1747331415&fm=27&gp=0.jpg','http://img0.imgtn.bdimg.com/it/u=3209619195,1147374931&fm=11&gp=0.jpg'],
     }
   },
@@ -93,7 +98,12 @@ export default {
   },
   methods:{
     onSubmit(){
-
+      this.$router.push({
+        path: '/success'
+      })
+    },
+    callphone(){
+     window.location.href = "tel:10086"
     }
   }
 }
@@ -161,6 +171,12 @@ export default {
   }
   .van-submit-bar{
     border-top: 1px solid #f2f2f2;
+  }
+  .service{
+    display: block;
+    padding-left: 30px;
+    font-size: 13px;
+    color:#999;
   }
 }
 </style>
