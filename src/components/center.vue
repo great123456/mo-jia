@@ -47,6 +47,7 @@ export default {
 </script>
 
 <style lang="scss" scoped type="text/css">
+@import '../styles/config.scss';
 .center{
 	width:100%;
 	height:100%;
@@ -54,7 +55,7 @@ export default {
 	.center-top{
 		width:100%;
 		height:10rem;
-		background: #38f;
+		background: $theme-color;
 		position: relative;
 		.login{
 			width:5rem;
@@ -64,10 +65,10 @@ export default {
 			font-size: 15px;
 			text-align: center;
 			line-height: 5rem;
-		    position: absolute;
-		    left:50%;
-		    top:2.5rem;
-		    transform: translateX(-50%);
+		  position: absolute;
+		  left:50%;
+		  top:2.5rem;
+		  transform: translateX(-50%);
 		}
 	}
 }
