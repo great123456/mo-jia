@@ -34,6 +34,7 @@
 import { Waterfall } from 'vant'
 import bottom from '@/components/bottom'
 import { getcode } from '@/config/auth'
+import { sendCode } from '@/service'
 export default {
   components: {
     bottom
@@ -88,9 +89,24 @@ export default {
     }
   },
   created(){
-    getcode()
+    if(this.$route.query.code || localStorage.getItem('code')){
+      let code = this.$route.query.code || localStorage.getItem('code')
+      localStorage.setItem("code",code)
+    }else{
+      getcode()
+    }
+   this.sendCodeval()
   },
   methods:{
+    sendCodeval(){
+      console.log('sendcode');
+      sendCode({
+        code: localStorage.getItem('code')
+      })
+      .then((res)=>{
+        console.log('res',res);
+      })
+    },
     detailPage(){
       this.$router.push({
        path: '/detail'
