@@ -11,7 +11,7 @@
         </van-swipe-item>
       </van-swipe>
     </div>
-    
+
 
     <div class="option">
       <ul>
@@ -24,7 +24,7 @@
       </ul>
       <p class="total">已加载全部数据</p>
     </div>
-    
+
     <bottom :dex="0"></bottom>
 
   </div>
@@ -33,6 +33,7 @@
 <script>
 import { Waterfall } from 'vant'
 import bottom from '@/components/bottom'
+import { getcode } from '@/config/auth'
 export default {
   components: {
     bottom
@@ -87,7 +88,7 @@ export default {
     }
   },
   created(){
-    
+    getcode()
   },
   methods:{
     detailPage(){
